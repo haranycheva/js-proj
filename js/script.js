@@ -50,7 +50,7 @@ function poriv(n1, n2){
     } else if (n1 === n2) {
         alert ("0");
     } else {
-        alert("error")
+        alert("error");
     }
 }
 
@@ -66,7 +66,7 @@ let poriv3 = (n1, n2) => {
     } else if (n1 === n2) {
         alert ("0");
     } else {
-        alert("error")
+        alert("error");
     }
 }
 
@@ -91,7 +91,7 @@ function showWords(){
     return text;
 }
 
-document.write(showWords("I've", "been", "learning", "JavaScript", "for", "a", "month"))
+document.write(showWords("I've", "been", "learning", "JavaScript", "for", "a", "month"));
 
 
 
