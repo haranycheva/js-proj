@@ -37,3 +37,50 @@ if (FIRST === "a") {
 }else {
     console.log("no");
 }
+
+// f1
+
+const NUM1 = Number(prompt("enter first number"));
+const NUM2 = Number(prompt("enter second number"));
+function poriv(n1, n2){
+    if (n1 > n2 ) {
+        alert("1");
+    } else if (n1 < n2 ) {
+        alert ("-1");
+    } else if (n1 === n2) {
+        alert ("0");
+    } else {
+        alert("error")
+    }
+}
+
+function poriv2(n1, n2){
+    n1 > n2 ? alert("1") : n1 < n2  ? alert("-1") : n1===n2 ? alert("0") : alert("error");
+}
+
+let poriv3 = (n1, n2) => {
+    if (n1 > n2 ) {
+        alert("1");
+    } else if (n1 < n2 ) {
+        alert ("-1");
+    } else if (n1 === n2) {
+        alert ("0");
+    } else {
+        alert("error")
+    }
+}
+
+poriv3(NUM1, NUM2);
+
+// f2
+const textFromUser = prompt("enter text");
+const colorFromUser = prompt("enter color");
+const bgColorFromUser = prompt("enter background color")
+function myParagraph(backColor, textColor, text) {
+    document.write(`<p style="background-color:${backColor}; color:${textColor}">${text}</p>`);
+}
+myParagraph(bgColorFromUser, colorFromUser, textFromUser);
+
+
+
+
