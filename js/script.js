@@ -70,7 +70,7 @@ let poriv3 = (n1, n2) => {
     }
 }
 
-poriv3(NUM1, NUM2);
+poriv(NUM1, NUM2);
 
 // f2
 const textFromUser = prompt("enter text");
@@ -80,6 +80,19 @@ function myParagraph(backColor, textColor, text) {
     document.write(`<p style="background-color:${backColor}; color:${textColor}">${text}</p>`);
 }
 myParagraph(bgColorFromUser, colorFromUser, textFromUser);
+
+// f arguments
+
+function showWords(){
+    let text = '';
+    for (let i = 0; i < arguments.length; i++ ) {
+        text += arguments[i] + ' ';
+    }
+    return text;
+}
+
+document.write(showWords("I've", "been", "learning", "JavaScript", "for", "a", "month"))
+
 
 
 
