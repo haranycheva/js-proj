@@ -91,7 +91,7 @@ function showWords(){
     return text;
 }
 
-document.write(showWords("I've", "been", "learning", "JavaScript", "for", "a", "month"));
+document.write(showWords("I've", "been", "learning", "JavaScript", "for", "a", "month") + "<br>");
 
 // m 1a
 let poem = ["Мороз","и", "солнце", "день","чудесный"];
