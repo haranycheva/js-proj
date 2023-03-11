@@ -93,6 +93,45 @@ function showWords(){
 
 document.write(showWords("I've", "been", "learning", "JavaScript", "for", "a", "month"));
 
+// m 1a
+let poem = ["Мороз","и", "солнце", "день","чудесный"];
+const fraseLenght = poem.length;
+const indexFromUser = Number(prompt(`enter the number of the word from 1 to ${fraseLenght}` )) - 1;
+const wordFromUser = prompt("enter the word");
+if (indexFromUser >= 0 && indexFromUser < fraseLenght) {
+    poem.splice(indexFromUser,1, wordFromUser);
+} else {
+    alert (" wrong value")
+}
+document.write(poem.join(" ") + '<br>')
+
+// m 1b
+let poem2 = ["Мороз","и", "солнце", "день","чудесный"];
+poem2.splice(poem2.length - 2, 1, "пень")
+document.write(poem2.join(" "));
+
+// m2
+let random = [];
+let masive = [];
+for (let i = 0; i < 20; i++) {
+    random.push(Math.floor(Math.random() * 101));
+}
+function numb (num) {
+    for ( let j of random){
+        if (j % num === 0) {
+            masive.push(j);
+        }
+    }
+    console.log(masive.join(" "));
+    masive.length = 0;
+}
+numb(2);
+numb(3);
+numb(5);
+numb(10);
+
+
+
 
 
 
