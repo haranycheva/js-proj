@@ -20,116 +20,241 @@
 // const MINUTES = Math.floor(NUM % 60);
 // console.log(`${String(HOURS).padStart(2,"0")}:${String(MINUTES).padStart(2, "0")}`);
 
-//1
-const BROWSER = "Opera";
-if (BROWSER === "Edge"){
-    alert("You've got the Edge!");
-}else if  ( BROWSER === "Chrome" || 'Firefox' || 'Safari' || 'Opera') {
-    alert('Okay we support these browsers too');
-}else {
-    alert('We hope that this page looks ok!');
-}
-//2
-const SIMB = "abcde";
-const FIRST = SIMB[0];
-if (FIRST === "a") {
-    console.log("yes");
-}else {
-    console.log("no");
-}
+// //1
+// const BROWSER = "Opera";
+// if (BROWSER === "Edge"){
+//     alert("You've got the Edge!");
+// }else if  ( BROWSER === "Chrome" || 'Firefox' || 'Safari' || 'Opera') {
+//     alert('Okay we support these browsers too');
+// }else {
+//     alert('We hope that this page looks ok!');
+// }
+// //2
+// const SIMB = "abcde";
+// const FIRST = SIMB[0];
+// if (FIRST === "a") {
+//     console.log("yes");
+// }else {
+//     console.log("no");
+// }
 
-// f1
+// // f1
 
-const NUM1 = Number(prompt("enter first number"));
-const NUM2 = Number(prompt("enter second number"));
-function poriv(n1, n2){
-    if (n1 > n2 ) {
-        alert("1");
-    } else if (n1 < n2 ) {
-        alert ("-1");
-    } else if (n1 === n2) {
-        alert ("0");
+// const NUM1 = Number(prompt("enter first number"));
+// const NUM2 = Number(prompt("enter second number"));
+// function poriv(n1, n2){
+//     if (n1 > n2 ) {
+//         alert("1");
+//     } else if (n1 < n2 ) {
+//         alert ("-1");
+//     } else if (n1 === n2) {
+//         alert ("0");
+//     } else {
+//         alert("error");
+//     }
+// }
+
+// function poriv2(n1, n2){
+//     n1 > n2 ? alert("1") : n1 < n2  ? alert("-1") : n1===n2 ? alert("0") : alert("error");
+// }
+
+// let poriv3 = (n1, n2) => {
+//     if (n1 > n2 ) {
+//         alert("1");
+//     } else if (n1 < n2 ) {
+//         alert ("-1");
+//     } else if (n1 === n2) {
+//         alert ("0");
+//     } else {
+//         alert("error");
+//     }
+// }
+
+// poriv(NUM1, NUM2);
+
+// // f2
+// const textFromUser = prompt("enter text");
+// const colorFromUser = prompt("enter color");
+// const bgColorFromUser = prompt("enter background color")
+// function myParagraph(backColor, textColor, text) {
+//     document.write(`<p style="background-color:${backColor}; color:${textColor}">${text}</p>`);
+// }
+// myParagraph(bgColorFromUser, colorFromUser, textFromUser);
+
+// // f arguments
+
+// function showWords(){
+//     let text = '';
+//     for (let i = 0; i < arguments.length; i++ ) {
+//         text += arguments[i] + ' ';
+//     }
+//     return text;
+// }
+
+// document.write(showWords("I've", "been", "learning", "JavaScript", "for", "a", "month") + '<br>');
+
+// // m 1a
+// let poem = ["Мороз","и", "солнце", "день","чудесный"];
+// const fraseLenght = poem.length;
+// const indexFromUser = Number(prompt(`enter the number of the word from 1 to ${fraseLenght}` )) - 1;
+// const wordFromUser = prompt("enter the word");
+// if (indexFromUser >= 0 && indexFromUser < fraseLenght) {
+//     poem.splice(indexFromUser,1, wordFromUser);
+// } else {
+//     alert (" wrong value")
+// }
+// document.write(poem.join(" ") + '<br>')
+
+// // m 1b
+// let poem2 = ["Мороз","и", "солнце", "день","чудесный"];
+// poem2.splice(poem2.length - 2, 1, "пень")
+// document.write(poem2.join(" "));
+
+// // m2
+// let random = [];
+// let masive = [];
+// for (let i = 0; i < 20; i++) {
+//     random.push(Math.floor(Math.random() * 101));
+// }
+// function numb (num) {
+//     for ( let j of random){
+//         if (j % num === 0) {
+//             masive.push(j);
+//         }
+//     }
+//     console.log(masive.join(" "));
+//     masive.length = 0;
+// }
+// numb(2);
+// numb(3);
+// numb(5);
+// numb(10);
+
+
+// const array = [2, 3, 44, 5656, 2323, 8789];
+// function sum(arr){
+//     let sumOfNumb = 0;
+//     for (const i of arr) {
+//         sumOfNumb += i;
+//     }
+//     return sumOfNumb;
+// }
+// console.log(sum(array));
+
+// const users = ["sasha", "dasha", "pasha"];
+// function login(userNames){
+//     const nameOfUser = prompt("ur name");
+//     userNames.includes(nameOfUser) 
+//     ? alert("вітаю в системі")
+//     : alert("такого користувача не існоє");
+// }
+// login(users);
+
+// const findUser = function(logins, log){
+//     return logins.includes(log)
+//     ? "u r in sistem"
+//     : "no"
+// }
+
+// const heigth = prompt("enter height");
+// const weigth = prompt("enter weight");
+// function comaToDotAndToNumb(str) {
+//     return Number(str.replace(",", ".")) //replace змінює лише перше знаходження (replaceAll змінює всі)
+// }
+// function calcMassIndex(w, h){
+//     w = comaToDotAndToNumb(w);
+//     h = comaToDotAndToNumb(h);
+//     return getNumb(w / Math.pow(h, 2));
+// }
+// console.log(calcMassIndex(weigth, heigth));
+
+// function getNumb (numb) {
+//     return Number(numb.toFixed(1))
+// }
+
+// // 1
+// const numb = [5, 676, 9454, 7, 38, 29];
+// function findSmallest(arr) {
+//     return Math.min(...arr);
+// }
+// console.log(findSmallest(numb));
+
+// // 2
+// const phrase = prompt("enter word");
+// function changeCase (word) {
+//     let reverseWord= "";
+//     for (let i of word){
+//         if (i === i.toUpperCase()){
+//             reverseWord += i.toLowerCase();
+//         } else {
+//             reverseWord += i.toUpperCase();
+//         }
+//     }
+//     return reverseWord;
+// }
+// console.log(changeCase(phrase))
+
+// // 3
+// const string = "Amazon was founded by Jeff Bezos from his garage in Bellevue Washington on July 5 1994";
+// function toLowCaseAndDefise(parahraf){
+//     let string2 = parahraf.toLowerCase();
+//     return string2.replaceAll(" ", "-");
+// }
+// console.log(toLowCaseAndDefise(string))
+
+// 4
+
+function toFilt(arr, ...elems){
+    let newArr = [];
+    for (let i of elems){
+        arr.indexOf(i) != -1 ? newArr.push(i) : '';
+    }
+    return newArr;
+}
+console.log(toFilt([10,20,30,40,50,60,70], 2, 46, 10, 40, 45, 87, 90, 20))
+
+// 5
+const arrr = [2, 434, 54546, 6, 786, 357, 6, 98, 0];
+const elemm = 3;
+const elem2 = 4;
+function addToArr (arr, elem){
+    if (arr.includes(elem)){
+        return "is in list";
     } else {
-        alert("error");
+        arr.push(elem);
+        return arr;
     }
 }
+console.log(addToArr(arrr, elemm));
 
-function poriv2(n1, n2){
-    n1 > n2 ? alert("1") : n1 < n2  ? alert("-1") : n1===n2 ? alert("0") : alert("error");
-}
-
-let poriv3 = (n1, n2) => {
-    if (n1 > n2 ) {
-        alert("1");
-    } else if (n1 < n2 ) {
-        alert ("-1");
-    } else if (n1 === n2) {
-        alert ("0");
-    } else {
-        alert("error");
+const arrr2 = [2, 434, 54546, 6, 786, 357, 6, 98, 0];
+function removeFromArr(arr, elem) {
+    let index = arr.indexOf(elem);
+    if (index === -1){
+        return "no value";
     }
+    arr.splice(index, 1)
+    return arr
 }
+console.log(removeFromArr(arrr2, elemm));
 
-poriv(NUM1, NUM2);
-
-// f2
-const textFromUser = prompt("enter text");
-const colorFromUser = prompt("enter color");
-const bgColorFromUser = prompt("enter background color")
-function myParagraph(backColor, textColor, text) {
-    document.write(`<p style="background-color:${backColor}; color:${textColor}">${text}</p>`);
-}
-myParagraph(bgColorFromUser, colorFromUser, textFromUser);
-
-// f arguments
-
-function showWords(){
-    let text = '';
-    for (let i = 0; i < arguments.length; i++ ) {
-        text += arguments[i] + ' ';
+const arrr3 = [2, 3, 54546, 6, 786, 357, 6, 98, 0];
+function removeFromArrAndAddNew(arr, elem1, elem2) {
+    let index = arr.indexOf(elem1);
+    if (index === -1){
+        return "no value";
     }
-    return text;
+    arr.splice(index, 1, elem2)
+    return arr
 }
+console.log(removeFromArrAndAddNew(arrr3, elemm, elem2));
 
-document.write(showWords("I've", "been", "learning", "JavaScript", "for", "a", "month") + '<br>');
-
-// m 1a
-let poem = ["Мороз","и", "солнце", "день","чудесный"];
-const fraseLenght = poem.length;
-const indexFromUser = Number(prompt(`enter the number of the word from 1 to ${fraseLenght}` )) - 1;
-const wordFromUser = prompt("enter the word");
-if (indexFromUser >= 0 && indexFromUser < fraseLenght) {
-    poem.splice(indexFromUser,1, wordFromUser);
-} else {
-    alert (" wrong value")
+// 6
+const alf =  ['python', 'javascript', 'c++','php'];
+function toAlfavit(arr) {
+    return arr.sort()
 }
-document.write(poem.join(" ") + '<br>')
-
-// m 1b
-let poem2 = ["Мороз","и", "солнце", "день","чудесный"];
-poem2.splice(poem2.length - 2, 1, "пень")
-document.write(poem2.join(" "));
-
-// m2
-let random = [];
-let masive = [];
-for (let i = 0; i < 20; i++) {
-    random.push(Math.floor(Math.random() * 101));
-}
-function numb (num) {
-    for ( let j of random){
-        if (j % num === 0) {
-            masive.push(j);
-        }
-    }
-    console.log(masive.join(" "));
-    masive.length = 0;
-}
-numb(2);
-numb(3);
-numb(5);
-numb(10);
-
+console.log(toAlfavit(alf))
 
 
 
