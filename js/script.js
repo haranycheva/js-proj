@@ -183,12 +183,12 @@
 // const phrase = prompt("enter word");
 // function changeCase (word) {
 //     let reverseWord= "";
-//     for (let i of word){
+//     for (const i of word){
 //         if (i === i.toUpperCase()){
 //             reverseWord += i.toLowerCase();
-//         } else {
-//             reverseWord += i.toUpperCase();
+//             continue
 //         }
+//         reverseWord += i.toUpperCase();
 //     }
 //     return reverseWord;
 // }
@@ -202,62 +202,135 @@
 // }
 // console.log(toLowCaseAndDefise(string))
 
-// 4
-
-function toFilt(arr, ...elems){
-    let newArr = [];
-    for (let i of elems){
-        arr.indexOf(i) != -1 ? newArr.push(i) : '';
-    }
-    return newArr;
-}
-console.log(toFilt([10,20,30,40,50,60,70], 2, 46, 10, 40, 45, 87, 90, 20))
+// //4
+// function toFilt(arr, ...elems){
+//     let newArr = [];
+//     for (const i of elems){
+//         arr.includes(i) ? newArr.push(i) : '';
+//     }
+//     return newArr;
+// }
+// console.log(toFilt([10,20,30,40,50,60,70], 2, 46, 10, 40, 45, 87, 90, 20))
 
 // 5
-const arrr = [2, 434, 54546, 6, 786, 357, 6, 98, 0];
-const elemm = 3;
-const elem2 = 4;
-function addToArr (arr, elem){
-    if (arr.includes(elem)){
-        return "is in list";
-    } else {
-        arr.push(elem);
-        return arr;
+// const arrr = [2, 434, 54546, 6, 786, 357, 6, 98, 0];
+// const elemm = 3;
+// const elem2 = 4;
+// function addToArr (arr, elem){
+//     if (arr.includes(elem)){
+//         return "is in list";
+//     } else {
+//         arr.push(elem);
+//         return arr;
+//     }
+// }
+// console.log(addToArr([2, 5, 454, 6, 5], 35));
+
+// const arrr2 = [2, 434, 54546, 6, 786, 357, 6, 98, 0];
+// function removeFromArr(arr, elem) {
+//     let index = arr.indexOf(elem);
+//     if (index === -1){
+//         return "no value";
+//     }
+//     arr.splice(index, 1)
+//     return arr
+// }
+// console.log(removeFromArr(arrr2, elemm));
+
+// const arrr3 = [2, 3, 54546, 6, 786, 357, 6, 98, 0];
+// function removeFromArrAndAddNew(arr, elem1, elem2) {
+//     let index = arr.indexOf(elem1);
+//     if (index === -1){
+//         return "no value";
+//     }
+//     arr.splice(index, 1, elem2)
+//     return arr
+// }
+// console.log(removeFromArrAndAddNew(arrr3, elemm, elem2));
+
+// // 6
+// const alf =  ['python', 'javascript', 'c++','php'];
+// function toAlfavit(arr) {
+//     return arr.sort()
+// }
+// console.log(toAlfavit(alf))
+// f(o)
+// o.f()
+
+//  отримати числа в порядку зменшення
+// 312 => 321
+
+// function toSort (elem){
+//     return String(elem).split('').sort().reverse().join('');
+// }
+// console.log(toSort(45839));
+
+// const vovels = ["a", "o", "i", "e", "u"]
+// function toCountShos (word){
+//     return word.toLowerCase().split("").filter(item => vovels.includes(item)).length;
+// }
+// console.log(toCountShos("arabee"));
+// 1
+
+// function hernya (str) {
+//     let counter = false;
+//     let char = "";
+//     for (let i = 0; i < str.length; i+=1){
+//         let letter = str[i]
+//         if (letter === " "){
+//             counter = true;
+//         }else if (counter || i===0){
+//             char += letter.toUpperCase();
+//             counter = false;
+//         }else {
+//             char += letter.toLowerCase();
+//         }
+//     }
+//     char = char.replaceAll(" ", '');
+//     return char.padStart(char.length + 1, "#");
+// }
+// console.log(hernya(" Hello there thanks for trying my Kata"))
+
+// 2
+// function zeroToEnd (arr){
+//     let counter = 0;
+//     let char = [];
+//     for (const item of arr){
+//         item === 0 ? counter += 1 : char.push(item);
+//     }
+//     for ( ; counter > 0 ; counter -= 1){
+//         char.push(0);
+//     }
+//     return char;
+// }
+// console.log(zeroToEnd([false, 0, 5, 34, 0, true, "ghhgfheg", 0]))
+
+// // 3
+// function compSame(a, b) {
+//     let counter = true;
+//     if (a.includes(null) || b.includes(null)){
+//         counter = false;
+//     }
+//     for (const item of a){
+//         b.includes(item**2) ? '' : counter = false;
+//     }
+//     return counter;
+// }
+// console.log(compSame( [121, 144, 19, 161, 19, 144, 19, 11],  [132, 14641, 20736, 361, 25921, 361, 20736, 361]));
+
+//4
+function toFindCubeAmount(m) {
+    counter = 0;
+    for (let i = 1; m > 0; i += 1) {
+        m -= m - i**3;
+        counter += 1;
+    }
+    if (m === 0) {
+        return counter;
+    }else {
+        return -1;
     }
 }
-console.log(addToArr(arrr, elemm));
-
-const arrr2 = [2, 434, 54546, 6, 786, 357, 6, 98, 0];
-function removeFromArr(arr, elem) {
-    let index = arr.indexOf(elem);
-    if (index === -1){
-        return "no value";
-    }
-    arr.splice(index, 1)
-    return arr
-}
-console.log(removeFromArr(arrr2, elemm));
-
-const arrr3 = [2, 3, 54546, 6, 786, 357, 6, 98, 0];
-function removeFromArrAndAddNew(arr, elem1, elem2) {
-    let index = arr.indexOf(elem1);
-    if (index === -1){
-        return "no value";
-    }
-    arr.splice(index, 1, elem2)
-    return arr
-}
-console.log(removeFromArrAndAddNew(arrr3, elemm, elem2));
-
-// 6
-const alf =  ['python', 'javascript', 'c++','php'];
-function toAlfavit(arr) {
-    return arr.sort()
-}
-console.log(toAlfavit(alf))
-
-
-
-
-
+console.log(toFindCubeAmount(1071225));
+console.log("dsjbdshvjds");
 
