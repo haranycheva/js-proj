@@ -322,7 +322,7 @@
 function toFindCubeAmount(m) {
     counter = 0;
     for (let i = 1; m > 0; i += 1) {
-        m -= m - i**3;
+        m = m - i**3;
         counter += 1;
     }
     if (m === 0) {
